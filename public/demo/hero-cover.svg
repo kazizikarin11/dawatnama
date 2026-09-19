@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" width="1200" height="1600" role="img">
+
+  <defs>
+    <linearGradient id="sky-2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4f463b"/>
+      <stop offset="62%" stop-color="#7c6f5d"/>
+      <stop offset="100%" stop-color="#4f463b"/>
+    </linearGradient>
+    <radialGradient id="glow-2" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#d2c4a8" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#d2c4a8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain-2" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="2"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <radialGradient id="vig-2" cx="50%" cy="50%" r="72%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.3"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1600" fill="url(#sky-2)"/>
+  <rect width="1200" height="1600" fill="url(#glow-2)"/>
+
+  <path d="M 0 992 C 300 832 660 1088 1200 927.9999999999999 L 1200 1600 L 0 1600 Z" fill="#7c6f5d" opacity="0.9"/>
+  <path d="M 0 1184 C 360 1056 744 1312 1200 1152 L 1200 1600 L 0 1600 Z" fill="#f4efe4" opacity="0.08"/>
+  <circle cx="360" cy="512" r="144" fill="#c9ae7c" opacity="0.25"/>
+  <circle cx="360" cy="512" r="240" fill="none" stroke="#c9ae7c" stroke-width="0.8" opacity="0.35"/>
+  <polygon points="912.0,268.0 928.7,311.6 971.4,292.6 952.4,335.3 996.0,352.0 952.4,368.7 971.4,411.4 928.7,392.4 912.0,436.0 895.3,392.4 852.6,411.4 871.6,368.7 828.0,352.0 871.6,335.3 852.6,292.6 895.3,311.6" fill="none" stroke="#c9ae7c" stroke-width="1" opacity="0.4"/>
+  <rect width="1200" height="1600" fill="url(#vig-2)"/>
+  <rect width="1200" height="1600" filter="url(#grain-2)" opacity="0.05"/>
+</svg>

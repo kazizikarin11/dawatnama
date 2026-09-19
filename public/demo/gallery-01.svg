@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" width="1200" height="1500" role="img">
+
+  <defs>
+    <linearGradient id="sky-5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EDE4D4"/>
+      <stop offset="62%" stop-color="#DBCBB2"/>
+      <stop offset="100%" stop-color="#EDE4D4"/>
+    </linearGradient>
+    <radialGradient id="glow-5" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#F7F1E6" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#F7F1E6" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain-5" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="5"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <radialGradient id="vig-5" cx="50%" cy="50%" r="72%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.3"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="url(#sky-5)"/>
+  <rect width="1200" height="1500" fill="url(#glow-5)"/>
+
+  <path d="M 0 930 C 300 780 660 1020.0000000000001 1200 869.9999999999999 L 1200 1500 L 0 1500 Z" fill="#DBCBB2" opacity="0.9"/>
+  <path d="M 0 1110 C 360 990 744 1230 1200 1080 L 1200 1500 L 0 1500 Z" fill="#4B4437" opacity="0.08"/>
+  <circle cx="360" cy="480" r="144" fill="#B98A5E" opacity="0.25"/>
+  <circle cx="360" cy="480" r="240" fill="none" stroke="#B98A5E" stroke-width="0.8" opacity="0.35"/>
+  <polygon points="912.0,246.0 928.7,289.6 971.4,270.6 952.4,313.3 996.0,330.0 952.4,346.7 971.4,389.4 928.7,370.4 912.0,414.0 895.3,370.4 852.6,389.4 871.6,346.7 828.0,330.0 871.6,313.3 852.6,270.6 895.3,289.6" fill="none" stroke="#B98A5E" stroke-width="1" opacity="0.4"/>
+  <rect width="1200" height="1500" fill="url(#vig-5)"/>
+  <rect width="1200" height="1500" filter="url(#grain-5)" opacity="0.05"/>
+</svg>

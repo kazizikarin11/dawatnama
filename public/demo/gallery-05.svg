@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000" role="img">
+
+  <defs>
+    <linearGradient id="sky-9" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F6EBE6"/>
+      <stop offset="62%" stop-color="#E7CFC8"/>
+      <stop offset="100%" stop-color="#F6EBE6"/>
+    </linearGradient>
+    <radialGradient id="glow-9" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#F9F4F0" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#F9F4F0" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain-9" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="9"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <radialGradient id="vig-9" cx="50%" cy="50%" r="72%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.3"/>
+    </radialGradient>
+  </defs>
+  <rect width="1000" height="1000" fill="url(#sky-9)"/>
+  <rect width="1000" height="1000" fill="url(#glow-9)"/>
+
+  <g><ellipse cx="500" cy="370" rx="60" ry="200" fill="none" stroke="#C08C74" stroke-width="1" opacity="0.4" transform="rotate(0.0 500 520)"/><ellipse cx="500" cy="370" rx="60" ry="200" fill="none" stroke="#C08C74" stroke-width="1" opacity="0.4" transform="rotate(40.0 500 520)"/><ellipse cx="500" cy="370" rx="60" ry="200" fill="none" stroke="#C08C74" stroke-width="1" opacity="0.4" transform="rotate(80.0 500 520)"/><ellipse cx="500" cy="370" rx="60" ry="200" fill="none" stroke="#C08C74" stroke-width="1" opacity="0.4" transform="rotate(120.0 500 520)"/><ellipse cx="500" cy="370" rx="60" ry="200" fill="none" stroke="#C08C74" stroke-width="1" opacity="0.4" transform="rotate(160.0 500 520)"/><ellipse cx="500" cy="370" rx="60" ry="200" fill="none" stroke="#C08C74" stroke-width="1" opacity="0.4" transform="rotate(200.0 500 520)"/><ellipse cx="500" cy="370" rx="60" ry="200" fill="none" stroke="#C08C74" stroke-width="1" opacity="0.4" transform="rotate(240.0 500 520)"/><ellipse cx="500" cy="370" rx="60" ry="200" fill="none" stroke="#C08C74" stroke-width="1" opacity="0.4" transform="rotate(280.0 500 520)"/><ellipse cx="500" cy="370" rx="60" ry="200" fill="none" stroke="#C08C74" stroke-width="1" opacity="0.4" transform="rotate(320.0 500 520)"/></g>
+  <circle cx="500" cy="520" r="45" fill="#C08C74" opacity="0.3"/>
+  <path d="M 100 860 C 320 700 680 1000 900 820" fill="none" stroke="#C08C74" stroke-width="1.2" opacity="0.35"/>
+  <path d="M 100 140 C 340 280 660 20 900 180" fill="none" stroke="#C08C74" stroke-width="1.2" opacity="0.3"/>
+  <rect width="1000" height="1000" fill="url(#vig-9)"/>
+  <rect width="1000" height="1000" filter="url(#grain-9)" opacity="0.05"/>
+</svg>

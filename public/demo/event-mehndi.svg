@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img">
+
+  <defs>
+    <linearGradient id="sky-12" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#DCE1D5"/>
+      <stop offset="62%" stop-color="#B9C3AC"/>
+      <stop offset="100%" stop-color="#DCE1D5"/>
+    </linearGradient>
+    <radialGradient id="glow-12" cx="50%" cy="38%" r="62%">
+      <stop offset="0%" stop-color="#F2F0E7" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#F2F0E7" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="grain-12" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="12"/>
+      <feColorMatrix type="saturate" values="0"/>
+    </filter>
+    <radialGradient id="vig-12" cx="50%" cy="50%" r="72%">
+      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0.3"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#sky-12)"/>
+  <rect width="1200" height="800" fill="url(#glow-12)"/>
+
+  <g><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(0.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(40.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(80.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(120.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(160.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(200.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(240.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(280.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(320.0 600 416)"/></g>
+  <circle cx="600" cy="416" r="54" fill="#A8763E" opacity="0.3"/>
+  <path d="M 120 688 C 384 560 816.0000000000001 800 1080 656" fill="none" stroke="#A8763E" stroke-width="1.2" opacity="0.35"/>
+  <path d="M 120 112.00000000000001 C 408.00000000000006 224.00000000000003 792 16 1080 144" fill="none" stroke="#A8763E" stroke-width="1.2" opacity="0.3"/>
+  <rect width="1200" height="800" fill="url(#vig-12)"/>
+  <rect width="1200" height="800" filter="url(#grain-12)" opacity="0.05"/>
+</svg>

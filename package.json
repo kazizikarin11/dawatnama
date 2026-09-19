@@ -1,0 +1,40 @@
+{
+  "name": "dawatnama",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Dawatnama — a reusable premium digital invitation platform for elegant Muslim weddings.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.116.0",
+    "clsx": "2.1.1",
+    "motion": "13.4.0",
+    "next": "16.3.5",
+    "qrcode": "1.5.4",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "tailwind-merge": "3.7.0",
+    "three": "^0.182.0",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "3.3.7",
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "26.6.2",
+    "@types/qrcode": "1.5.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "^0.182.0",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.5",
+    "playwright": "^1.58.0",
+    "tailwindcss": "4.3.3",
+    "typescript": "5.9.3"
+  }
+}
