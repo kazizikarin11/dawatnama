@@ -21,3 +21,4 @@ screenshots
 
 # Local-only: pins npm's cache to drive D on this machine
 .npmrc
+.vercel
