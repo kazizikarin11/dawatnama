@@ -58,8 +58,21 @@ async function readStore(): Promise<StoreShape> {
 }
 
 async function writeStore(store: StoreShape): Promise<void> {
-  await mkdir(dirname(STORE_PATH), { recursive: true });
-  await writeFile(STORE_PATH, JSON.stringify(store, null, 2), "utf8");
+  try {
+    await mkdir(dirname(STORE_PATH), { recursive: true });
+    await writeFile(STORE_PATH, JSON.stringify(store, null, 2), "utf8");
+  } catch (error) {
+    // Serverless hosts have a read-only filesystem, so local mode cannot persist
+    // there. Fail with an instruction rather than an unhandled filesystem error.
+    const code = (error as NodeJS.ErrnoException).code;
+    if (code === "EROFS" || code === "EACCES" || code === "EPERM") {
+      throw new Error(
+        "This deployment has no database configured. Add NEXT_PUBLIC_SUPABASE_URL " +
+          "and NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY to enable saving invitations.",
+      );
+    }
+    throw error;
+  }
 }
 
 export class LocalRepository implements InvitationRepository {
