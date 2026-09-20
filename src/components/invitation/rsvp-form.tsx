@@ -83,15 +83,29 @@ interface RsvpFormProps {
   mode: RenderMode;
   variant: RsvpVariant;
   className?: string;
+  /**
+   * Preselected answer. The cinematic templates ask "will you join us?" on its own
+   * screen, so the guest has already chosen by the time they reach the form.
+   */
+  initialAttendance?: RsvpAttendance;
+  /** Hides the in-form attendance switch when it was already asked. */
+  hideAttendance?: boolean;
 }
 
-export function RsvpForm({ data, mode, variant, className }: RsvpFormProps) {
+export function RsvpForm({
+  data,
+  mode,
+  variant,
+  className,
+  initialAttendance = "attending",
+  hideAttendance = false,
+}: RsvpFormProps) {
   const styles = VARIANTS[variant];
   const settings = useMotionSettings();
   const events = useMemo(() => rsvpEvents(data), [data]);
   const { rsvp } = data;
 
-  const [attendance, setAttendance] = useState<RsvpAttendance>("attending");
+  const [attendance, setAttendance] = useState<RsvpAttendance>(initialAttendance);
   const [guestName, setGuestName] = useState("");
   const [phone, setPhone] = useState("");
   const [guestCount, setGuestCount] = useState(1);
@@ -223,7 +237,7 @@ export function RsvpForm({ data, mode, variant, className }: RsvpFormProps) {
             className="space-y-7 text-left"
           >
             {/* Attendance -------------------------------------------------- */}
-            <fieldset>
+            <fieldset className={hideAttendance ? "sr-only" : undefined}>
               <legend className={cn("mb-3 block", styles.label)}>
                 Will you attend?
               </legend>

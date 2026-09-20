@@ -360,6 +360,34 @@
   }
 }
 
+/* Travelling mark inside the scroll cue's hairline. */
+@keyframes dawat-cue {
+  0% {
+    transform: translateY(-120%);
+    opacity: 0;
+  }
+  35% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(320%);
+    opacity: 0;
+  }
+}
+
+/* Slow breath on the opening call to action. */
+@keyframes dawat-breathe {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.035);
+  }
+}
+
 @keyframes dawat-pulse-ring {
   0% {
     transform: scale(0.85);

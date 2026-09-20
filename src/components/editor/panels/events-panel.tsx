@@ -33,13 +33,38 @@ export function EventsPanel({ ownerId }: { ownerId: string }) {
     <div className="space-y-4">
       <Panel
         title="Events"
-        description="Add as many functions as your family is holding. Guests only see the ones that are switched on."
+        description="Add as many functions as your family is holding. Guests only see the ones that are switched on, so you can keep an event without showing it yet."
         actions={
-          <Button variant="secondary" onClick={editor.addEvent}>
+          <Button variant="secondary" onClick={() => editor.addEvent()}>
             Add event
           </Button>
         }
       >
+        {/* One tap per function: add the ones you are holding, skip the rest. */}
+        <div className="mb-6 space-y-2.5">
+          <p className="text-fluid-xs tracking-label-tight text-ink-muted">
+            Quick add
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {SUGGESTIONS.filter(
+              (suggestion) =>
+                !draft.events.some(
+                  (event) =>
+                    event.name.trim().toLowerCase() === suggestion.toLowerCase(),
+                ),
+            ).map((suggestion) => (
+              <button
+                key={suggestion}
+                type="button"
+                onClick={() => editor.addEvent(suggestion)}
+                className="rounded-full border border-line px-3.5 py-2 text-fluid-xs text-ink-soft transition-colors hover:border-brass hover:text-ink"
+              >
+                + {suggestion}
+              </button>
+            ))}
+          </div>
+        </div>
+
         {draft.events.length === 0 ? (
           <p className="text-fluid-sm text-ink-muted">
             No events yet. Add the Nikah to begin.
@@ -249,6 +274,7 @@ export function EventsPanel({ ownerId }: { ownerId: string }) {
                 <div className="space-y-3 pt-1">
                   <Toggle
                     label="Show this event"
+                    description="Switched off, this event keeps its details but gets no screen in the invitation."
                     checked={event.enabled}
                     onChange={(value) => editor.updateEvent(event.id, { enabled: value })}
                   />

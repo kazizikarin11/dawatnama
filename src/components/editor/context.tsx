@@ -50,7 +50,8 @@ interface EditorApi {
   setSeo: (partial: Partial<SeoConfig>) => void;
   toggleSection: (id: SectionId, value: boolean) => void;
 
-  addEvent: () => void;
+  /** Optionally pre-named, so a common function can be added in one tap. */
+  addEvent: (name?: string) => void;
   updateEvent: (id: string, partial: Partial<WeddingEvent>) => void;
   removeEvent: (id: string) => void;
   moveEvent: (id: string, direction: -1 | 1) => void;
@@ -173,12 +174,14 @@ export function EditorProvider({
 
       /* Events ----------------------------------------------------- */
 
-      addEvent: () =>
+      addEvent: (name) =>
         setEvents([
           ...draft.events,
           {
             id: createId("event"),
-            name: "New event",
+            // Guarded because this is also used directly as a click handler,
+            // where the first argument would be the event object.
+            name: typeof name === "string" && name.trim() ? name.trim() : "New event",
             subtitle: null,
             description: null,
             date: draft.weddingDate,

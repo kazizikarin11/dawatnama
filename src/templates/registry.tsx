@@ -15,11 +15,20 @@ import type { TemplateProps } from "./contract";
  * up and returned, so React never sees a component created during render.
  */
 
-const RoyalEmerald = dynamic(() => import("./royal-emerald/template"));
-const IvoryRose = dynamic(() => import("./ivory-rose/template"));
-const MidnightCrescent = dynamic(() => import("./midnight-crescent/template"));
-const MughalArch = dynamic(() => import("./mughal-arch/template"));
-const MinimalSignature = dynamic(() => import("./minimal-signature/template"));
+/**
+ * All five templates run the cinematic scene system: a deck of full-viewport
+ * scenes built from the invitation's own data. Each one carries its own motion
+ * language — gold linework, botanical drift, night glow, drawn architecture and
+ * pure typography respectively — over the same shared scene engine.
+ *
+ * The earlier single-page compositions are kept alongside at `./<name>/template`
+ * for reference and are no longer routed to.
+ */
+const RoyalEmerald = dynamic(() => import("./royal-emerald/cinematic"));
+const IvoryRose = dynamic(() => import("./ivory-rose/cinematic"));
+const MidnightCrescent = dynamic(() => import("./midnight-crescent/cinematic"));
+const MughalArch = dynamic(() => import("./mughal-arch/cinematic"));
+const MinimalSignature = dynamic(() => import("./minimal-signature/cinematic"));
 
 export const FALLBACK_TEMPLATE_ID: TemplateId = "royal-emerald";
 

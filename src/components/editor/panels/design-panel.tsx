@@ -127,7 +127,7 @@ export function DesignPanel() {
 
       <Panel
         title="Sections"
-        description="Switch a section off and it disappears cleanly — the design closes the gap rather than leaving empty space."
+        description="Every section is optional. Switch one off and its screens leave the invitation entirely — the sequence renumbers itself rather than leaving a gap."
       >
         <div className="space-y-4">
           {SECTION_ORDER.map((section) => (
