@@ -99,7 +99,12 @@ insert into public.templates (id, name, tagline, color_scheme, sort_order) value
   ('ivory-rose',        'Ivory & Rose',      'Soft luxury, styled like a fashion editorial.',          'light', 2),
   ('midnight-crescent', 'Midnight Crescent', 'A wedding film opening, lit by moonlight.',             'dark',  3),
   ('mughal-arch',       'Mughal Arch',       'Contemporary South Asian architecture, in sand and sage.', 'light', 4),
-  ('minimal-signature', 'Minimal Signature', 'Type, space and photography. Nothing else.',            'light', 5)
+  ('minimal-signature', 'Minimal Signature', 'Type, space and photography. Nothing else.',            'light', 5),
+  ('peacock-zari',      'Peacock Zari',      'Peacock teal, embroidered in gold thread.',             'dark',  6),
+  ('velvet-maroon',     'Velvet Maroon',     'A curtain rising on wine and antique brass.',           'dark',  7),
+  ('sage-linen',        'Sage Linen',        'Eucalyptus and oat, for a daytime nikah.',              'light', 8),
+  ('deco-noir',         'Deco Noir',         'Black and brass, cut in straight lines.',               'dark',  9),
+  ('calligraphy-azure', 'Calligraphy Azure', 'Lapis and gold, written by hand.',                      'dark',  10)
 on conflict (id) do update
   set name = excluded.name,
       tagline = excluded.tagline,

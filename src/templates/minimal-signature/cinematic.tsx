@@ -387,30 +387,35 @@ function CoverScene({
 
       <CoverCanvas template="minimal-signature" />
 
-      <SceneBody align="left" justify="end">
-        {/* A tracked line at the very top, hard against the margin. */}
-        <motion.div
-          className="absolute inset-x-7 flex items-center justify-between"
-          style={{ top: "max(2.75rem, env(safe-area-inset-top))" }}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.4, delay: 0.4 }}
-        >
-          <span className="text-[0.55rem] tracking-[0.4em] text-[var(--t-ink-muted)] uppercase">
-            {data.familyInvitationWording ? "With their families" : "The wedding of"}
+      {/* A tracked line at the very top, hard against the margin. */}
+      <motion.div
+        className="absolute inset-x-7 z-10 flex items-center justify-between"
+        style={{ top: "max(2.75rem, env(safe-area-inset-top))" }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.4, delay: 0.4 }}
+      >
+        <span className="text-[0.55rem] tracking-[0.4em] text-[var(--t-ink-muted)] uppercase">
+          {data.familyInvitationWording ? "With their families" : "The wedding of"}
+        </span>
+        {parts && (
+          <span className="text-[0.55rem] tracking-[0.3em] text-[var(--t-accent)] uppercase">
+            {parts.day}.{String(parts.monthName).slice(0, 3)}.{parts.year}
           </span>
-          {parts && (
-            <span className="text-[0.55rem] tracking-[0.3em] text-[var(--t-accent)] uppercase">
-              {parts.day}.{String(parts.monthName).slice(0, 3)}.{parts.year}
-            </span>
-          )}
-        </motion.div>
+        )}
+      </motion.div>
 
+      {/**
+       * Centred rather than pinned to the bottom. Bottom-aligning this much type
+       * left the top half of the screen as dead black space, which read as broken
+       * rather than as restraint.
+       */}
+      <SceneBody align="left" justify="center">
         {data.islamic.bismillahArabic && (
           <motion.p
             lang="ar"
             dir="rtl"
-            className="mb-10 text-fluid-sm text-[var(--t-accent)]"
+            className="mb-9 text-fluid-sm text-[var(--t-accent)]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 2, delay: 0.9 }}
@@ -431,11 +436,12 @@ function CoverScene({
           </span>
           <span className="sr-only"> and </span>
 
-          {/* The ampersand is small and set in champagne — one of three accents. */}
+          {/* Champagne, and large enough to actually read as an ampersand — at
+              1.5rem in Italiana it reduced to an unreadable squiggle. */}
           <motion.span
             aria-hidden
-            className="my-2 block font-[family-name:var(--font-fashion)] text-[var(--t-accent)]"
-            style={{ fontSize: "clamp(1rem, 4.5vw, 1.5rem)", lineHeight: 1 }}
+            className="my-1 block font-[family-name:var(--font-fashion)] text-[var(--t-accent)]"
+            style={{ fontSize: "clamp(2rem, 9vw, 3rem)", lineHeight: 1 }}
             initial={{ opacity: 0, x: settings.enabled ? -14 : 0 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.1, delay: 2.5, ease: [0.22, 1, 0.36, 1] }}

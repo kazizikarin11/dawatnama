@@ -115,4 +115,86 @@ export const COVER_PRESETS: Record<TemplateId, CoverPreset> = {
     parallax: 0.2,
     bokeh: 0,
   },
+
+  // Gold thread catching light over teal, with a green-cast aurora so the
+  // template never drifts toward Midnight Crescent's blue.
+  "peacock-zari": {
+    count: 480,
+    colorA: "#d9a94c",
+    colorB: "#4fd1c5",
+    size: 24,
+    direction: 1,
+    spread: 7,
+    sway: 0.5,
+    speed: 0.5,
+    glow: { color: "#d9a94c", intensity: 0.15, scale: 5 },
+    aurora: { color: "#0f6b62", intensity: 0.14 },
+    parallax: 0.55,
+    bokeh: 16,
+  },
+
+  // Heavy warm dust settling through a curtained room. Slow and low.
+  "velvet-maroon": {
+    count: 360,
+    colorA: "#c08a3e",
+    colorB: "#e3c68f",
+    size: 28,
+    direction: -1,
+    spread: 6.5,
+    sway: 0.3,
+    speed: 0.3,
+    glow: { color: "#c08a3e", intensity: 0.17, scale: 5.5 },
+    aurora: { color: "#5c1729", intensity: 0.18 },
+    parallax: 0.34,
+    bokeh: 18,
+  },
+
+  // Daylight and pollen. The quietest of the light templates.
+  "sage-linen": {
+    count: 220,
+    colorA: "#6e7f6a",
+    colorB: "#e7e3d4",
+    size: 30,
+    direction: -1,
+    spread: 7,
+    sway: 0.7,
+    speed: 0.3,
+    glow: { color: "#ffffff", intensity: 0.12, scale: 6 },
+    aurora: { color: "#b6c2ac", intensity: 0.06 },
+    parallax: 0.26,
+    bokeh: 10,
+  },
+
+  // Brass flecks against black. Tight, bright, and no atmosphere at all —
+  // this template's drama is geometric, not weather.
+  "deco-noir": {
+    count: 300,
+    colorA: "#c9a15a",
+    colorB: "#f4f0e8",
+    size: 16,
+    direction: 1,
+    spread: 6,
+    sway: 0.14,
+    speed: 0.6,
+    glow: { color: "#c9a15a", intensity: 0.12, scale: 4 },
+    aurora: { color: "#c9a15a", intensity: 0.04 },
+    parallax: 0.42,
+    bokeh: 4,
+  },
+
+  // Gold leaf lifting off a lapis page.
+  "calligraphy-azure": {
+    count: 400,
+    colorA: "#d4b061",
+    colorB: "#f5f3ec",
+    size: 20,
+    direction: 1,
+    spread: 8,
+    sway: 0.36,
+    speed: 0.36,
+    glow: { color: "#d4b061", intensity: 0.13, scale: 5 },
+    aurora: { color: "#16315c", intensity: 0.2 },
+    parallax: 0.6,
+    bokeh: 12,
+  },
 };

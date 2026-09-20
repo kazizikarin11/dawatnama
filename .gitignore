@@ -19,6 +19,10 @@ next-env.d.ts
 # Visual QA artefacts produced by scripts/capture-*.mjs
 screenshots
 
+# Supabase CLI local state (linked project ref, version cache, branches)
+supabase/.temp
+supabase/.branches
+
 # Local-only: pins npm's cache to drive D on this machine
 .npmrc
 .vercel

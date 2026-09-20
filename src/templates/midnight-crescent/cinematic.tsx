@@ -372,25 +372,27 @@ function CoverScene({ data, mode }: { data: WeddingData; mode: TemplateProps["mo
       <CoverCanvas template="midnight-crescent" />
       <GoldMotes count={14} />
 
-      {/* Layer 2 — the crescent emerges above the type and light blooms behind it */}
+      {/* Layer 2 — the crescent emerges above the type and light blooms behind it.
+          It is pinned near the top and the reading column starts below it; at
+          `top-[14%]` with a 132px moon the Bismillah collided with the crescent. */}
       <motion.div
         aria-hidden
-        className="pointer-events-none absolute inset-x-0 top-[14%] flex justify-center"
+        className="pointer-events-none absolute inset-x-0 top-[7%] flex justify-center"
         initial={{ opacity: 0, y: settings.enabled ? 34 : 0 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 2.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
       >
-        <Crescent size={132} delay={0.6} />
+        <Crescent size={118} delay={0.6} />
       </motion.div>
 
       <LightBloom intensity={0.42} />
 
-      <SceneBody>
+      <SceneBody style={{ paddingTop: "max(11rem, calc(env(safe-area-inset-top) + 10rem))" }}>
         {data.islamic.bismillahArabic && (
           <motion.p
             lang="ar"
             dir="rtl"
-            className="mt-24 text-fluid-base text-[var(--t-accent-soft)]"
+            className="text-fluid-base text-[var(--t-accent-soft)]"
             initial={{ opacity: 0, filter: "blur(8px)" }}
             animate={{ opacity: 1, filter: "blur(0px)" }}
             transition={{ duration: 2.2, delay: 1.5, ease: [0.22, 1, 0.36, 1] }}

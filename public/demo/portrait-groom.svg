@@ -1,31 +1,206 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" width="900" height="1200" role="img" aria-label="Illustrated portrait of a groom in an ivory sherwani and gold turban with a flower garland">
 
   <defs>
-    <linearGradient id="sky-4" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#DCE1D5"/>
-      <stop offset="62%" stop-color="#B9C3AC"/>
-      <stop offset="100%" stop-color="#DCE1D5"/>
+    <linearGradient id="groom-ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F4E7DA"/>
+      <stop offset="58%" stop-color="#E9D2C2"/>
+      <stop offset="100%" stop-color="#DCBFAC"/>
     </linearGradient>
-    <radialGradient id="glow-4" cx="50%" cy="38%" r="62%">
-      <stop offset="0%" stop-color="#F2F0E7" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#F2F0E7" stop-opacity="0"/>
+
+    <radialGradient id="groom-halo" cx="50%" cy="38%" r="52%">
+      <stop offset="0%" stop-color="#FFF8F0" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFF8F0" stop-opacity="0"/>
     </radialGradient>
-    <filter id="grain-4" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="4"/>
+
+    <!-- Deliberately deeper than the backdrop; an ivory this close to the ground
+         made the whole figure dissolve into it. -->
+    <linearGradient id="groom-coat" x1="0" y1="0" x2="0.25" y2="1">
+      <stop offset="0%" stop-color="#EFE2C3"/>
+      <stop offset="55%" stop-color="#DDCBA4"/>
+      <stop offset="100%" stop-color="#BFA87F"/>
+    </linearGradient>
+
+    <linearGradient id="groom-turban" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0%" stop-color="#FCF6E8"/>
+      <stop offset="55%" stop-color="#F2E6CC"/>
+      <stop offset="100%" stop-color="#DCC9A4"/>
+    </linearGradient>
+
+    <linearGradient id="groom-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F2DA9C"/>
+      <stop offset="50%" stop-color="#D9AC53"/>
+      <stop offset="100%" stop-color="#B98B36"/>
+    </linearGradient>
+
+    <filter id="groom-grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="11"/>
       <feColorMatrix type="saturate" values="0"/>
     </filter>
-    <radialGradient id="vig-4" cx="50%" cy="50%" r="72%">
-      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#000" stop-opacity="0.3"/>
+
+    <radialGradient id="groom-vig" cx="50%" cy="48%" r="72%">
+      <stop offset="58%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#3A2018" stop-opacity="0.34"/>
     </radialGradient>
   </defs>
-  <rect width="900" height="1200" fill="url(#sky-4)"/>
-  <rect width="900" height="1200" fill="url(#glow-4)"/>
 
-  <path d="M 189 1008 L 189 520.8000000000001 C 189 268.8 332.55 168.00000000000003 450 168.00000000000003 C 567.45 168.00000000000003 711 268.8 711 520.8000000000001 L 711 1008 Z" fill="#F2F0E7" opacity="0.5"/>
-  <path d="M 189 1008 L 189 520.8000000000001 C 189 268.8 332.55 168.00000000000003 450 168.00000000000003 C 567.45 168.00000000000003 711 268.8 711 520.8000000000001 L 711 1008 Z" fill="none" stroke="#A8763E" stroke-width="1.4" opacity="0.6"/>
-  <circle cx="450" cy="487.20000000000005" r="104.4" fill="#B9C3AC" opacity="0.85"/>
-  <path d="M 272.52 1008 C 293.4 722.4 606.6 722.4 627.48 1008 Z" fill="#B9C3AC" opacity="0.85"/>
-  <rect width="900" height="1200" fill="url(#vig-4)"/>
-  <rect width="900" height="1200" filter="url(#grain-4)" opacity="0.05"/>
+  <!-- Ground -->
+  <rect width="900" height="1200" fill="url(#groom-ground)"/>
+  <circle cx="450" cy="455" r="330" fill="url(#groom-halo)"/>
+
+  <!-- Decorative arch, matching the bride's -->
+  <path d="M 196 1200 L 196 512 C 196 286 330 182 450 182 C 570 182 704 286 704 512 L 704 1200 Z"
+        fill="none" stroke="#C08C74" stroke-width="2" opacity="0.45"/>
+
+  <g fill="#FFFDF8" opacity="0.7">
+    <circle cx="188" cy="360" r="9"/><circle cx="208" cy="392" r="6"/>
+    <circle cx="712" cy="404" r="9"/><circle cx="690" cy="368" r="6"/>
+    <circle cx="164" cy="628" r="7"/><circle cx="736" cy="654" r="7"/>
+  </g>
+
+  <!-- ================= Figure ================= -->
+
+  <!-- Sherwani -->
+  <path d="M 206 1200 C 218 880 318 692 450 692 C 582 692 682 880 694 1200 Z" fill="url(#groom-coat)"/>
+  <path d="M 206 1200 C 218 880 318 692 450 692 C 582 692 682 880 694 1200 Z"
+        fill="none" stroke="#9C8763" stroke-width="3"/>
+
+  <!-- Lapels, meeting at a mandarin collar -->
+  <path d="M 450 702 L 372 756 L 396 1200 L 450 1200 Z" fill="#E8D8B4"/>
+  <path d="M 450 702 L 528 756 L 504 1200 L 450 1200 Z" fill="#D8C49B"/>
+  <path d="M 450 702 L 372 756 M 450 702 L 528 756" stroke="#9C8763" stroke-width="2.5" fill="none"/>
+  <path d="M 450 716 L 450 1200" stroke="#9C8763" stroke-width="2.5"/>
+
+  <!-- Collar -->
+  <path d="M 388 690 C 412 726 488 726 512 690 L 506 668 C 484 694 416 694 394 668 Z" fill="#F2E7CD" stroke="#9C8763" stroke-width="2.5"/>
+
+  <!-- Gold buttons down the placket -->
+  <g fill="url(#groom-gold)">
+    <circle cx="450" cy="800" r="11"/>
+    <circle cx="450" cy="872" r="11"/>
+    <circle cx="450" cy="944" r="11"/>
+    <circle cx="450" cy="1016" r="11"/>
+  </g>
+
+  <!-- Embroidery: a paisley curl on each panel -->
+  <g fill="none" stroke="url(#groom-gold)" stroke-width="3.5" opacity="0.75">
+    <path d="M 370 900 C 344 926 346 968 374 984 C 358 958 356 926 370 900 Z"/>
+    <path d="M 530 900 C 556 926 554 968 526 984 C 542 958 544 926 530 900 Z"/>
+  </g>
+  <g fill="url(#groom-gold)" opacity="0.7">
+    <circle cx="358" cy="938" r="4"/>
+    <circle cx="542" cy="938" r="4"/>
+  </g>
+
+  <!-- Neck -->
+  <path d="M 408 596 L 492 596 L 498 698 L 402 698 Z" fill="#E0A97F"/>
+  <path d="M 408 596 L 492 596 L 492 628 C 466 652 434 652 408 628 Z" fill="#CE9569" opacity="0.85"/>
+
+  <!-- Head -->
+  <ellipse cx="450" cy="486" rx="106" ry="124" fill="#EDBE93"/>
+  <ellipse cx="450" cy="508" rx="102" ry="98" fill="#E7B286" opacity="0.4"/>
+
+  <!-- Ears -->
+  <ellipse cx="346" cy="508" rx="15" ry="24" fill="#E0A97F"/>
+  <ellipse cx="554" cy="508" rx="15" ry="24" fill="#E0A97F"/>
+
+  <!-- Brows -->
+  <path d="M 378 464 C 396 452 424 452 440 462" fill="none" stroke="#2A1A12" stroke-width="9" stroke-linecap="round"/>
+  <path d="M 460 462 C 476 452 504 452 522 464" fill="none" stroke="#2A1A12" stroke-width="9" stroke-linecap="round"/>
+
+  <!-- Eyes, open and calm -->
+  <ellipse cx="406" cy="504" rx="17" ry="13" fill="#FFFFFF"/>
+  <ellipse cx="494" cy="504" rx="17" ry="13" fill="#FFFFFF"/>
+  <circle cx="408" cy="505" r="8" fill="#33211A"/>
+  <circle cx="492" cy="505" r="8" fill="#33211A"/>
+  <path d="M 388 494 C 398 486 416 486 424 493" fill="none" stroke="#2A1A12" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M 476 493 C 484 486 502 486 512 494" fill="none" stroke="#2A1A12" stroke-width="4.5" stroke-linecap="round"/>
+
+  <!-- Nose -->
+  <path d="M 450 512 L 450 548 C 450 556 442 558 436 554" fill="none" stroke="#C68A61" stroke-width="5.5" stroke-linecap="round"/>
+
+  <!-- Beard, trimmed close along the jaw -->
+  <path d="M 352 500 C 350 580 388 626 450 626 C 512 626 550 580 548 500
+           C 546 566 512 596 450 596 C 388 596 354 566 352 500 Z" fill="#2E1D15"/>
+  <path d="M 396 596 C 412 616 488 616 504 596 C 500 632 400 632 396 596 Z" fill="#2E1D15"/>
+  <!-- Moustache -->
+  <path d="M 412 572 C 428 562 472 562 488 572 C 472 582 428 582 412 572 Z" fill="#2E1D15"/>
+  <!-- Mouth -->
+  <path d="M 426 586 C 440 594 460 594 474 586" fill="none" stroke="#9C5A46" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- ================= Turban ================= -->
+
+  <!-- The wrapped body of the pagri, sitting over the crown -->
+  <path d="M 326 470 C 326 356 380 288 450 288 C 520 288 574 356 574 470
+           C 574 430 560 396 450 396 C 340 396 326 430 326 470 Z" fill="url(#groom-turban)"/>
+  <path d="M 322 468 C 330 420 370 384 450 384 C 530 384 570 420 578 468
+           C 566 414 522 362 450 362 C 378 362 334 414 322 468 Z" fill="#F7EEDA"/>
+
+  <!-- Wrap folds -->
+  <g fill="none" stroke="#D3BE97" stroke-width="3.5" opacity="0.95">
+    <path d="M 340 452 C 366 402 404 380 450 380 C 496 380 534 402 560 452"/>
+    <path d="M 348 420 C 374 372 410 352 450 352 C 490 352 526 372 552 420"/>
+    <path d="M 362 388 C 386 342 416 322 450 322 C 484 322 514 342 538 388"/>
+  </g>
+
+  <!-- Gold band across the brow of the turban -->
+  <path d="M 326 466 C 352 436 400 424 450 424 C 500 424 548 436 574 466"
+        fill="none" stroke="url(#groom-gold)" stroke-width="12"/>
+  <g fill="#8B2F44">
+    <circle cx="450" cy="432" r="7"/>
+    <circle cx="396" cy="440" r="5"/>
+    <circle cx="504" cy="440" r="5"/>
+  </g>
+
+  <!-- Kalgi: a single plume swept back from a jewelled mount, sarpech fashion -->
+  <path d="M 452 292 C 458 238 478 198 512 170 C 508 214 492 258 466 294 Z" fill="url(#groom-gold)"/>
+  <path d="M 452 292 C 462 244 476 212 500 186" fill="none" stroke="#B98B36" stroke-width="2.5" opacity="0.8"/>
+  <path d="M 450 292 C 452 252 462 224 478 202 C 472 236 464 264 458 292 Z" fill="#F2DA9C" opacity="0.8"/>
+  <!-- A small spray of pearls at the mount -->
+  <g stroke="#B98B36" stroke-width="2" fill="none">
+    <path d="M 442 288 C 432 268 424 252 418 240"/>
+    <path d="M 436 290 C 424 276 414 266 404 258"/>
+  </g>
+  <circle cx="416" cy="236" r="6" fill="#FBF3E2" stroke="#B98B36" stroke-width="1.5"/>
+  <circle cx="401" cy="254" r="5" fill="#FBF3E2" stroke="#B98B36" stroke-width="1.5"/>
+  <circle cx="452" cy="300" r="18" fill="url(#groom-gold)"/>
+  <circle cx="452" cy="300" r="8" fill="#8B2F44"/>
+
+  <!-- The tail of the turban, falling behind one shoulder -->
+  <path d="M 566 452 C 610 520 626 616 618 700 L 566 700 C 578 610 566 528 546 470 Z" fill="#E6D8B6"/>
+  <path d="M 566 452 C 610 520 626 616 618 700" fill="none" stroke="url(#groom-gold)" stroke-width="6" opacity="0.8"/>
+
+  <!-- ================= Garland ================= -->
+
+  <!-- A single closed loop of marigold and motia over the sherwani -->
+  <path d="M 376 714 C 358 830 404 936 450 962 C 496 936 542 830 524 714"
+        fill="none" stroke="#C9762A" stroke-width="3" opacity="0.45"/>
+
+  <g>
+    <circle cx="376" cy="720" r="16" fill="#E8913C"/><circle cx="369" cy="760" r="15" fill="#FBF3E2"/>
+    <circle cx="366" cy="800" r="16" fill="#E8913C"/><circle cx="372" cy="840" r="15" fill="#FBF3E2"/>
+    <circle cx="386" cy="878" r="16" fill="#E8913C"/><circle cx="406" cy="912" r="15" fill="#FBF3E2"/>
+    <circle cx="428" cy="940" r="16" fill="#E8913C"/><circle cx="450" cy="958" r="15" fill="#FBF3E2"/>
+    <circle cx="472" cy="940" r="16" fill="#E8913C"/><circle cx="494" cy="912" r="15" fill="#FBF3E2"/>
+    <circle cx="514" cy="878" r="16" fill="#E8913C"/><circle cx="528" cy="840" r="15" fill="#FBF3E2"/>
+    <circle cx="534" cy="800" r="16" fill="#E8913C"/><circle cx="531" cy="760" r="15" fill="#FBF3E2"/>
+    <circle cx="524" cy="720" r="16" fill="#E8913C"/>
+  </g>
+
+  <!-- Marigold centres, and a stitch through each motia -->
+  <g fill="#C9762A" opacity="0.65">
+    <circle cx="376" cy="720" r="6"/><circle cx="366" cy="800" r="6"/>
+    <circle cx="386" cy="878" r="6"/><circle cx="428" cy="940" r="6"/>
+    <circle cx="472" cy="940" r="6"/><circle cx="514" cy="878" r="6"/>
+    <circle cx="534" cy="800" r="6"/><circle cx="524" cy="720" r="6"/>
+  </g>
+  <g fill="#E8D5B4">
+    <circle cx="369" cy="760" r="4"/><circle cx="372" cy="840" r="4"/>
+    <circle cx="406" cy="912" r="4"/><circle cx="450" cy="958" r="4"/>
+    <circle cx="494" cy="912" r="4"/><circle cx="528" cy="840" r="4"/>
+    <circle cx="531" cy="760" r="4"/>
+  </g>
+
+  <!-- Finish -->
+  <rect width="900" height="1200" fill="url(#groom-vig)"/>
+  <rect width="900" height="1200" filter="url(#groom-grain)" opacity="0.05"/>
 </svg>

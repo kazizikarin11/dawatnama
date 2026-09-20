@@ -29,6 +29,11 @@ const IvoryRose = dynamic(() => import("./ivory-rose/cinematic"));
 const MidnightCrescent = dynamic(() => import("./midnight-crescent/cinematic"));
 const MughalArch = dynamic(() => import("./mughal-arch/cinematic"));
 const MinimalSignature = dynamic(() => import("./minimal-signature/cinematic"));
+const PeacockZari = dynamic(() => import("./peacock-zari/cinematic"));
+const VelvetMaroon = dynamic(() => import("./velvet-maroon/cinematic"));
+const SageLinen = dynamic(() => import("./sage-linen/cinematic"));
+const DecoNoir = dynamic(() => import("./deco-noir/cinematic"));
+const CalligraphyAzure = dynamic(() => import("./calligraphy-azure/cinematic"));
 
 export const FALLBACK_TEMPLATE_ID: TemplateId = "royal-emerald";
 
@@ -38,6 +43,11 @@ const IMPLEMENTED: ReadonlySet<TemplateId> = new Set<TemplateId>([
   "midnight-crescent",
   "mughal-arch",
   "minimal-signature",
+  "peacock-zari",
+  "velvet-maroon",
+  "sage-linen",
+  "deco-noir",
+  "calligraphy-azure",
 ]);
 
 export function isTemplateImplemented(id: TemplateId): boolean {
@@ -57,6 +67,16 @@ export function TemplateOutlet({ data, sections, mode }: TemplateProps) {
       return <MughalArch {...props} />;
     case "minimal-signature":
       return <MinimalSignature {...props} />;
+    case "peacock-zari":
+      return <PeacockZari {...props} />;
+    case "velvet-maroon":
+      return <VelvetMaroon {...props} />;
+    case "sage-linen":
+      return <SageLinen {...props} />;
+    case "deco-noir":
+      return <DecoNoir {...props} />;
+    case "calligraphy-azure":
+      return <CalligraphyAzure {...props} />;
     case "royal-emerald":
     default:
       return <RoyalEmerald {...props} />;

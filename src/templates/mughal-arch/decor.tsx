@@ -63,7 +63,17 @@ export function DrawnArch({
   double?: boolean;
 }) {
   return (
-    <div className={cn("pointer-events-none relative text-[var(--t-accent)]", className)}>
+    /**
+     * `h-full w-full` is load-bearing. ArchOutline positions itself with
+     * `absolute inset-0`, so without an explicit size this wrapper collapses to
+     * zero height and the arch renders invisibly — which is exactly what it did.
+     */
+    <div
+      className={cn(
+        "pointer-events-none relative h-full w-full text-[var(--t-accent)]",
+        className,
+      )}
+    >
       <ArchOutline
         shape={variant === "wide" ? "wide" : "tall"}
         delay={delay}

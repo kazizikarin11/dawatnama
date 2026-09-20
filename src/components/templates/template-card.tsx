@@ -23,13 +23,19 @@ export function TemplateCard({
   const [bg, , accent, ...rest] = template.palette;
   const ink = template.colorScheme === "dark" ? "#f5efe3" : "#2b2722";
 
-  const specimenFont =
+  // Each card previews the template in that template's own display face.
+  const specimenFont: string =
     {
       "royal-emerald": "var(--font-cormorant)",
       "ivory-rose": "var(--font-playfair)",
       "midnight-crescent": "var(--font-cormorant)",
       "mughal-arch": "var(--font-marcellus)",
       "minimal-signature": "var(--font-italiana)",
+      "peacock-zari": "var(--font-cormorant)",
+      "velvet-maroon": "var(--font-playfair)",
+      "sage-linen": "var(--font-marcellus)",
+      "deco-noir": "var(--font-italiana)",
+      "calligraphy-azure": "var(--font-cormorant)",
     }[template.id] ?? "var(--font-cormorant)";
 
   return (

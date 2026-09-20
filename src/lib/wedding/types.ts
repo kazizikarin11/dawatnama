@@ -14,6 +14,11 @@ export const TEMPLATE_IDS = [
   "midnight-crescent",
   "mughal-arch",
   "minimal-signature",
+  "peacock-zari",
+  "velvet-maroon",
+  "sage-linen",
+  "deco-noir",
+  "calligraphy-azure",
 ] as const;
 
 export type TemplateId = (typeof TEMPLATE_IDS)[number];
