@@ -1,31 +1,94 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img">
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" width="900" height="1600" role="img" aria-label="Illustration of a hand patterned with henna, framed by marigolds and leaves">
   <defs>
-    <linearGradient id="sky-12" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#DCE1D5"/>
-      <stop offset="62%" stop-color="#B9C3AC"/>
-      <stop offset="100%" stop-color="#DCE1D5"/>
+    <linearGradient id="mh-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#173528"/>
+      <stop offset="44%" stop-color="#2F5A3A"/>
+      <stop offset="74%" stop-color="#6E7F34"/>
+      <stop offset="100%" stop-color="#24422C"/>
     </linearGradient>
-    <radialGradient id="glow-12" cx="50%" cy="38%" r="62%">
-      <stop offset="0%" stop-color="#F2F0E7" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#F2F0E7" stop-opacity="0"/>
+    <radialGradient id="mh-glow" cx="50%" cy="46%" r="42%">
+      <stop offset="0%" stop-color="#FFE08A" stop-opacity="0.62"/>
+      <stop offset="100%" stop-color="#FFE08A" stop-opacity="0"/>
     </radialGradient>
-    <filter id="grain-12" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="12"/>
-      <feColorMatrix type="saturate" values="0"/>
-    </filter>
-    <radialGradient id="vig-12" cx="50%" cy="50%" r="72%">
-      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#000" stop-opacity="0.3"/>
+    <radialGradient id="mh-vig" cx="50%" cy="46%" r="70%">
+      <stop offset="52%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#11241C" stop-opacity="0.6"/>
     </radialGradient>
   </defs>
-  <rect width="1200" height="800" fill="url(#sky-12)"/>
-  <rect width="1200" height="800" fill="url(#glow-12)"/>
 
-  <g><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(0.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(40.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(80.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(120.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(160.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(200.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(240.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(280.0 600 416)"/><ellipse cx="600" cy="296" rx="72" ry="160" fill="none" stroke="#A8763E" stroke-width="1" opacity="0.4" transform="rotate(320.0 600 416)"/></g>
-  <circle cx="600" cy="416" r="54" fill="#A8763E" opacity="0.3"/>
-  <path d="M 120 688 C 384 560 816.0000000000001 800 1080 656" fill="none" stroke="#A8763E" stroke-width="1.2" opacity="0.35"/>
-  <path d="M 120 112.00000000000001 C 408.00000000000006 224.00000000000003 792 16 1080 144" fill="none" stroke="#A8763E" stroke-width="1.2" opacity="0.3"/>
-  <rect width="1200" height="800" fill="url(#vig-12)"/>
-  <rect width="1200" height="800" filter="url(#grain-12)" opacity="0.05"/>
+  <rect width="900" height="1600" fill="url(#mh-sky)"/>
+  <circle cx="450" cy="740" r="450" fill="url(#mh-glow)"/>
+
+  <!-- Marigold strands hanging at both margins -->
+  <g>
+    <path d="M104 0 L 104 420" stroke="#C9762A" stroke-width="3" opacity="0.45"/>
+    <path d="M796 0 L 796 420" stroke="#C9762A" stroke-width="3" opacity="0.45"/>
+    <g fill="#EE9A3C">
+      <circle cx="104" cy="42" r="22"/><circle cx="104" cy="114" r="21"/><circle cx="104" cy="184" r="19"/>
+      <circle cx="104" cy="250" r="16"/><circle cx="104" cy="310" r="13"/>
+      <circle cx="796" cy="42" r="22"/><circle cx="796" cy="114" r="21"/><circle cx="796" cy="184" r="19"/>
+      <circle cx="796" cy="250" r="16"/><circle cx="796" cy="310" r="13"/>
+    </g>
+    <g fill="#C9762A" opacity="0.5">
+      <circle cx="104" cy="42" r="8"/><circle cx="104" cy="114" r="8"/><circle cx="104" cy="184" r="7"/>
+      <circle cx="796" cy="42" r="8"/><circle cx="796" cy="114" r="8"/><circle cx="796" cy="184" r="7"/>
+    </g>
+  </g>
+
+  <!-- Leaves sweeping in from the sides -->
+  <g fill="#9FBE6A" opacity="0.7">
+    <ellipse cx="170" cy="640" rx="62" ry="28" transform="rotate(-22 170 640)"/>
+    <ellipse cx="116" cy="742" rx="54" ry="24" transform="rotate(-8 116 742)"/>
+    <ellipse cx="730" cy="640" rx="62" ry="28" transform="rotate(22 730 640)"/>
+    <ellipse cx="784" cy="742" rx="54" ry="24" transform="rotate(8 784 742)"/>
+    <ellipse cx="196" cy="980" rx="50" ry="22" transform="rotate(14 196 980)"/>
+    <ellipse cx="704" cy="980" rx="50" ry="22" transform="rotate(-14 704 980)"/>
+  </g>
+
+  <!-- The hand, palm forward, centred -->
+  <g>
+    <!-- forearm -->
+    <path d="M382 1420 L 518 1420 L 508 1120 L 392 1120 Z" fill="#E8B183"/>
+    <!-- palm -->
+    <path d="M336 1130 C 330 1006, 362 930, 450 930 C 538 930, 570 1006, 564 1130
+             C 558 1216, 516 1258, 450 1258 C 384 1258, 342 1216, 336 1130 Z" fill="#EFC095"/>
+    <!-- fingers -->
+    <g fill="#EFC095">
+      <path d="M360 956 C 346 858, 354 768, 380 764 C 406 760, 416 846, 414 946 Z"/>
+      <path d="M418 944 C 412 824, 420 718, 448 716 C 476 714, 484 824, 482 944 Z"/>
+      <path d="M486 946 C 486 840, 498 750, 524 754 C 550 758, 550 856, 538 956 Z"/>
+      <path d="M542 976 C 550 900, 570 832, 592 844 C 614 856, 602 940, 580 1002 Z"/>
+      <path d="M336 1122 C 288 1078, 254 1110, 268 1154 C 284 1198, 328 1204, 352 1182 Z"/>
+    </g>
+
+    <!-- Henna: a mandala at the centre of the palm with vines onto the fingers -->
+    <g fill="none" stroke="#6E2F18" stroke-width="6" opacity="0.9">
+      <circle cx="450" cy="1096" r="40"/>
+      <circle cx="450" cy="1096" r="68"/>
+      <path d="M450 1028 L 450 998 M450 1164 L 450 1194 M382 1096 L 352 1096 M518 1096 L 548 1096"/>
+      <path d="M402 1048 L 380 1026 M498 1048 L 520 1026 M402 1144 L 380 1166 M498 1144 L 520 1166"/>
+      <path d="M450 998 C 444 946, 452 900, 450 856"/>
+      <path d="M414 946 C 392 900, 378 852, 376 810"/>
+      <path d="M510 952 C 530 906, 542 858, 542 816"/>
+      <path d="M450 1194 C 426 1224, 428 1246, 450 1256"/>
+    </g>
+    <g fill="#6E2F18" opacity="0.9">
+      <circle cx="450" cy="1096" r="13"/>
+      <circle cx="450" cy="998" r="8"/><circle cx="450" cy="1164" r="8"/>
+      <circle cx="352" cy="1096" r="8"/><circle cx="548" cy="1096" r="8"/>
+      <!-- fingertip caps -->
+      <path d="M362 770 C 384 760, 406 772, 402 798 C 382 810, 364 798, 362 770 Z"/>
+      <path d="M428 722 C 452 712, 476 724, 472 750 C 450 762, 430 750, 428 722 Z"/>
+      <path d="M502 756 C 526 750, 544 766, 538 792 C 516 800, 500 782, 502 756 Z"/>
+      <path d="M578 850 C 598 848, 610 868, 600 890 C 578 894, 566 872, 578 850 Z"/>
+    </g>
+  </g>
+
+  <!-- Petals on the floor -->
+  <g fill="#EE9A3C" opacity="0.6">
+    <ellipse cx="190" cy="1330" rx="26" ry="15"/><ellipse cx="712" cy="1352" rx="26" ry="15"/>
+    <ellipse cx="290" cy="1450" rx="20" ry="12"/><ellipse cx="620" cy="1430" rx="20" ry="12"/>
+  </g>
+
+  <rect width="900" height="1600" fill="url(#mh-vig)"/>
 </svg>

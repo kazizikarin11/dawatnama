@@ -24,6 +24,7 @@ export function ImageField({
   ownerId,
   hint,
   aspect = "aspect-[4/3]",
+  fallback,
 }: {
   label: string;
   value: ImageAsset | null;
@@ -31,6 +32,12 @@ export function ImageField({
   ownerId: string;
   hint?: string;
   aspect?: string;
+  /**
+   * Supplied artwork this field can be reset to. Used by the couple portraits,
+   * which ship with an illustration: without this, removing a photograph leaves
+   * an empty frame and no way back to the original.
+   */
+  fallback?: { label: string; image: ImageAsset };
 }) {
   const fileRef = useRef<HTMLInputElement>(null);
   const [status, setStatus] = useState<"idle" | "uploading" | "error">("idle");
@@ -144,6 +151,12 @@ export function ImageField({
                   {status === "uploading" ? "Uploading…" : "Upload"}
                 </Button>
               </>
+            )}
+
+            {fallback && value?.url !== fallback.image.url && (
+              <Button variant="secondary" onClick={() => onChange(fallback.image)}>
+                {fallback.label}
+              </Button>
             )}
 
             {value && (

@@ -1,5 +1,6 @@
 import type {
   Appearance,
+  ImageAsset,
   IslamicContent,
   MusicConfig,
   RsvpConfig,
@@ -53,6 +54,43 @@ export const DEFAULT_MUSIC: MusicConfig = {
   credit: null,
   loop: true,
 };
+
+/**
+ * Illustrated portraits, used as the starting artwork for every new invitation.
+ *
+ * A new invitation is opened and shared long before the couple has photographs
+ * they are happy with, and an empty portrait frame makes the couple scenes look
+ * broken. These illustrations are deliberately stylised rather than photographic,
+ * so they read as intentional artwork instead of a missing image, and the author
+ * replaces either one with a photograph whenever they are ready.
+ */
+export const DEFAULT_BRIDE_PORTRAIT: ImageAsset = {
+  id: "illustration-bride",
+  url: "/illustration/portrait-bride.svg",
+  alt: "Illustrated portrait of the bride",
+  width: 900,
+  height: 1200,
+  blurDataURL: null,
+  caption: null,
+};
+
+export const DEFAULT_GROOM_PORTRAIT: ImageAsset = {
+  id: "illustration-groom",
+  url: "/illustration/portrait-groom.svg",
+  alt: "Illustrated portrait of the groom",
+  width: 900,
+  height: 1200,
+  blurDataURL: null,
+  caption: null,
+};
+
+/** True when a portrait is still the supplied illustration rather than a photo. */
+export function isDefaultPortrait(image: ImageAsset | null | undefined): boolean {
+  if (!image?.url) return false;
+  return (
+    image.url === DEFAULT_BRIDE_PORTRAIT.url || image.url === DEFAULT_GROOM_PORTRAIT.url
+  );
+}
 
 export const DEFAULT_APPEARANCE: Appearance = {
   templateId: "royal-emerald",

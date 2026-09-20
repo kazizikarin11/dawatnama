@@ -1,34 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img">
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1600" width="900" height="1600" role="img" aria-label="Illustration of a laid banquet table beneath a chandelier">
   <defs>
-    <linearGradient id="sky-14" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#070B17"/>
-      <stop offset="62%" stop-color="#101A32"/>
-      <stop offset="100%" stop-color="#070B17"/>
+    <linearGradient id="wl-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#241609"/>
+      <stop offset="42%" stop-color="#4E3216"/>
+      <stop offset="74%" stop-color="#8A5E2A"/>
+      <stop offset="100%" stop-color="#2E1D0C"/>
     </linearGradient>
-    <radialGradient id="glow-14" cx="50%" cy="38%" r="62%">
-      <stop offset="0%" stop-color="#1B2847" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#1B2847" stop-opacity="0"/>
+    <radialGradient id="wl-glow" cx="50%" cy="30%" r="42%">
+      <stop offset="0%" stop-color="#FFE3A6" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#FFE3A6" stop-opacity="0"/>
     </radialGradient>
-    <filter id="grain-14" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" seed="14"/>
-      <feColorMatrix type="saturate" values="0"/>
-    </filter>
-    <radialGradient id="vig-14" cx="50%" cy="50%" r="72%">
-      <stop offset="60%" stop-color="#000" stop-opacity="0"/>
-      <stop offset="100%" stop-color="#000" stop-opacity="0.3"/>
+    <linearGradient id="wl-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F6E3AC"/>
+      <stop offset="50%" stop-color="#DDB25C"/>
+      <stop offset="100%" stop-color="#B98B36"/>
+    </linearGradient>
+    <linearGradient id="wl-cloth" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FCF6E7"/>
+      <stop offset="100%" stop-color="#D4C09A"/>
+    </linearGradient>
+    <radialGradient id="wl-vig" cx="50%" cy="40%" r="70%">
+      <stop offset="52%" stop-color="#000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1B1009" stop-opacity="0.6"/>
     </radialGradient>
   </defs>
-  <rect width="1200" height="800" fill="url(#sky-14)"/>
-  <rect width="1200" height="800" fill="url(#glow-14)"/>
 
-  <g><circle cx="0.0" cy="10.2" r="0.6" fill="#EFE7D6" opacity="0.15"/><circle cx="913.2" cy="312.0" r="1.1" fill="#EFE7D6" opacity="0.27"/><circle cx="626.4" cy="13.8" r="1.6" fill="#EFE7D6" opacity="0.39"/><circle cx="339.6" cy="315.6" r="0.6" fill="#EFE7D6" opacity="0.51"/><circle cx="52.8" cy="17.4" r="1.1" fill="#EFE7D6" opacity="0.15"/><circle cx="966.0" cy="319.2" r="1.6" fill="#EFE7D6" opacity="0.27"/><circle cx="679.2" cy="21.0" r="0.6" fill="#EFE7D6" opacity="0.39"/><circle cx="392.4" cy="322.8" r="1.1" fill="#EFE7D6" opacity="0.51"/><circle cx="105.6" cy="24.6" r="1.6" fill="#EFE7D6" opacity="0.15"/><circle cx="1018.8" cy="326.4" r="0.6" fill="#EFE7D6" opacity="0.27"/><circle cx="732.0" cy="28.2" r="1.1" fill="#EFE7D6" opacity="0.39"/><circle cx="445.2" cy="330.0" r="1.6" fill="#EFE7D6" opacity="0.51"/><circle cx="158.4" cy="31.8" r="0.6" fill="#EFE7D6" opacity="0.15"/><circle cx="1071.6" cy="333.6" r="1.1" fill="#EFE7D6" opacity="0.27"/><circle cx="784.8" cy="35.4" r="1.6" fill="#EFE7D6" opacity="0.39"/><circle cx="498.0" cy="337.2" r="0.6" fill="#EFE7D6" opacity="0.51"/><circle cx="211.2" cy="39.0" r="1.1" fill="#EFE7D6" opacity="0.15"/><circle cx="1124.4" cy="340.8" r="1.6" fill="#EFE7D6" opacity="0.27"/><circle cx="837.6" cy="42.6" r="0.6" fill="#EFE7D6" opacity="0.39"/><circle cx="550.8" cy="344.4" r="1.1" fill="#EFE7D6" opacity="0.51"/><circle cx="264.0" cy="46.2" r="1.6" fill="#EFE7D6" opacity="0.15"/><circle cx="1177.2" cy="348.0" r="0.6" fill="#EFE7D6" opacity="0.27"/><circle cx="890.4" cy="49.8" r="1.1" fill="#EFE7D6" opacity="0.39"/><circle cx="603.6" cy="351.6" r="1.6" fill="#EFE7D6" opacity="0.51"/><circle cx="316.8" cy="53.4" r="0.6" fill="#EFE7D6" opacity="0.15"/><circle cx="30.0" cy="355.2" r="1.1" fill="#EFE7D6" opacity="0.27"/></g>
+  <rect width="900" height="1600" fill="url(#wl-sky)"/>
+  <circle cx="450" cy="480" r="440" fill="url(#wl-glow)"/>
+
+  <!-- Chandelier, hung high and centred -->
   <g>
-    <circle cx="744" cy="240" r="128" fill="#EFE7D6" opacity="0.9"/>
-    <circle cx="797.76" cy="211.84" r="117.76" fill="#070B17"/>
+    <path d="M450 0 L 450 150" stroke="url(#wl-gold)" stroke-width="5"/>
+    <path d="M318 226 C 352 172, 548 172, 582 226 Z" fill="url(#wl-gold)" opacity="0.9"/>
+    <path d="M292 226 L 608 226" stroke="url(#wl-gold)" stroke-width="6"/>
+    <g fill="#FFF0C8">
+      <circle cx="326" cy="256" r="10"/><circle cx="376" cy="274" r="11"/><circle cx="426" cy="286" r="11"/>
+      <circle cx="476" cy="286" r="11"/><circle cx="526" cy="274" r="11"/><circle cx="576" cy="256" r="10"/>
+    </g>
+    <g stroke="url(#wl-gold)" stroke-width="3" opacity="0.7" fill="none">
+      <path d="M326 256 L 326 226"/><path d="M376 274 L 376 226"/><path d="M426 286 L 426 226"/>
+      <path d="M476 286 L 476 226"/><path d="M526 274 L 526 226"/><path d="M576 256 L 576 226"/>
+    </g>
+    <circle cx="450" cy="330" r="20" fill="#FFF7DC"/>
+    <circle cx="450" cy="330" r="52" fill="#FFE3A6" opacity="0.32"/>
   </g>
-  <path d="M 0 624 C 360 560 840 688 1200 608 L 1200 800 L 0 800 Z" fill="#070B17" opacity="0.85"/>
-  <line x1="0" y1="624" x2="1200" y2="608" stroke="#D8B978" stroke-width="1" opacity="0.4"/>
-  <rect width="1200" height="800" fill="url(#vig-14)"/>
-  <rect width="1200" height="800" filter="url(#grain-14)" opacity="0.05"/>
+
+  <!-- String lights sweeping in from the margins -->
+  <path d="M-20 300 C 130 400, 250 430, 300 400" fill="none" stroke="#DDB25C" stroke-width="3" opacity="0.45"/>
+  <path d="M920 300 C 770 400, 650 430, 600 400" fill="none" stroke="#DDB25C" stroke-width="3" opacity="0.45"/>
+  <g fill="#FFE3A6">
+    <circle cx="60" cy="356" r="9"/><circle cx="160" cy="404" r="9"/><circle cx="260" cy="420" r="9"/>
+    <circle cx="840" cy="356" r="9"/><circle cx="740" cy="404" r="9"/><circle cx="640" cy="420" r="9"/>
+  </g>
+
+  <!-- The table -->
+  <g>
+    <ellipse cx="450" cy="1180" rx="440" ry="40" fill="#180E07" opacity="0.4"/>
+    <path d="M60 920 L 840 920 L 900 1600 L 0 1600 Z" fill="url(#wl-cloth)"/>
+    <path d="M60 920 L 840 920" stroke="#C2AC84" stroke-width="6"/>
+    <!-- gold runner down the centre -->
+    <path d="M250 920 L 650 920 L 690 1600 L 210 1600 Z" fill="url(#wl-gold)" opacity="0.24"/>
+    <g stroke="#C8B68F" stroke-width="4" opacity="0.6">
+      <path d="M180 930 L 150 1600"/><path d="M330 930 L 320 1600"/><path d="M450 930 L 450 1600"/>
+      <path d="M570 930 L 580 1600"/><path d="M720 930 L 750 1600"/>
+    </g>
+  </g>
+
+  <!-- Centrepiece: a tiered stand of sweets -->
+  <g>
+    <rect x="426" y="800" width="48" height="120" rx="6" fill="url(#wl-gold)"/>
+    <ellipse cx="450" cy="800" rx="124" ry="24" fill="url(#wl-gold)"/>
+    <rect x="438" y="700" width="24" height="100" fill="url(#wl-gold)" opacity="0.9"/>
+    <ellipse cx="450" cy="700" rx="88" ry="18" fill="url(#wl-gold)"/>
+    <g fill="#E4707E">
+      <circle cx="394" cy="782" r="18"/><circle cx="450" cy="776" r="18"/><circle cx="506" cy="782" r="18"/>
+      <circle cx="418" cy="684" r="15"/><circle cx="482" cy="684" r="15"/>
+    </g>
+    <g fill="#FBF5E6">
+      <circle cx="422" cy="788" r="12"/><circle cx="478" cy="788" r="12"/><circle cx="450" cy="678" r="12"/>
+    </g>
+  </g>
+
+  <!-- Place settings -->
+  <g>
+    <g fill="#FBF5E6" stroke="#D0BD95" stroke-width="5">
+      <ellipse cx="190" cy="1046" rx="84" ry="26"/>
+      <ellipse cx="710" cy="1046" rx="84" ry="26"/>
+    </g>
+    <g fill="url(#wl-gold)" opacity="0.45">
+      <ellipse cx="190" cy="1046" rx="50" ry="14"/>
+      <ellipse cx="710" cy="1046" rx="50" ry="14"/>
+    </g>
+    <g fill="#F6EBCF" opacity="0.88">
+      <path d="M300 900 L 344 900 L 336 964 L 308 964 Z"/>
+      <rect x="318" y="964" width="8" height="30"/>
+      <ellipse cx="322" cy="998" rx="22" ry="7"/>
+      <path d="M556 900 L 600 900 L 592 964 L 564 964 Z"/>
+      <rect x="574" y="964" width="8" height="30"/>
+      <ellipse cx="578" cy="998" rx="22" ry="7"/>
+    </g>
+  </g>
+
+  <!-- Rose petals on the cloth -->
+  <g fill="#E4707E" opacity="0.65">
+    <ellipse cx="120" cy="1200" rx="24" ry="14" transform="rotate(-18 120 1200)"/>
+    <ellipse cx="780" cy="1220" rx="24" ry="14" transform="rotate(16 780 1220)"/>
+    <ellipse cx="300" cy="1330" rx="20" ry="12" transform="rotate(8 300 1330)"/>
+    <ellipse cx="610" cy="1300" rx="20" ry="12" transform="rotate(-10 610 1300)"/>
+  </g>
+
+  <rect width="900" height="1600" fill="url(#wl-vig)"/>
 </svg>

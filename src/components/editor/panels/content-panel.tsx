@@ -1,5 +1,10 @@
 "use client";
 
+import {
+  DEFAULT_BRIDE_PORTRAIT,
+  DEFAULT_GROOM_PORTRAIT,
+  isDefaultPortrait,
+} from "@/lib/wedding/defaults";
 import { useEditor } from "../context";
 import { ImageField } from "../image-field";
 import {
@@ -74,6 +79,15 @@ export function ContentPanel({ ownerId }: { ownerId: string }) {
                   value={party.photo}
                   onChange={(image) => editor.setParty(role, { photo: image })}
                   aspect="aspect-[3/4]"
+                  hint={
+                    isDefaultPortrait(party.photo)
+                      ? "This is the supplied illustration. Upload a photograph to replace it."
+                      : undefined
+                  }
+                  fallback={{
+                    label: "Use illustration",
+                    image: role === "bride" ? DEFAULT_BRIDE_PORTRAIT : DEFAULT_GROOM_PORTRAIT,
+                  }}
                 />
               </div>
             );

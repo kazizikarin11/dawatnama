@@ -24,7 +24,7 @@ const raw = {
       parents: "Daughter of Mr. & Mrs. Imran Hasan",
       description:
         "An architect from Lahore who collects old poetry, bakes on Fridays, and believes every home should hold a garden.",
-      photo: { url: "/demo/portrait-bride.svg", alt: "Portrait of the bride" },
+      photo: { url: "/illustration/portrait-bride.svg", alt: "Illustrated portrait of the bride" },
     },
     groom: {
       name: "Ahmed Bilal Khan",
@@ -32,7 +32,7 @@ const raw = {
       parents: "Son of Mr. & Mrs. Sohail Khan",
       description:
         "A software engineer from Karachi who runs at dawn, keeps too many notebooks, and makes the better chai.",
-      photo: { url: "/demo/portrait-groom.svg", alt: "Portrait of the groom" },
+      photo: { url: "/illustration/portrait-groom.svg", alt: "Illustrated portrait of the groom" },
     },
   },
 

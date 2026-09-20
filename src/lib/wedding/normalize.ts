@@ -1,6 +1,8 @@
 import { createId } from "@/lib/utils/id";
 import {
   DEFAULT_APPEARANCE,
+  DEFAULT_BRIDE_PORTRAIT,
+  DEFAULT_GROOM_PORTRAIT,
   DEFAULT_ISLAMIC,
   DEFAULT_MUSIC,
   DEFAULT_RSVP,
@@ -483,8 +485,11 @@ export function createEmptyWedding(seed?: {
 }): WeddingData {
   return normalizeWedding({
     couple: {
-      bride: { name: seed?.brideName ?? "" },
-      groom: { name: seed?.groomName ?? "" },
+      // Both portraits start as the supplied illustrations so the couple scenes
+      // are complete from the first save. Either can be replaced with a
+      // photograph in the editor.
+      bride: { name: seed?.brideName ?? "", photo: DEFAULT_BRIDE_PORTRAIT },
+      groom: { name: seed?.groomName ?? "", photo: DEFAULT_GROOM_PORTRAIT },
     },
     slug: seed?.slug ?? "",
     appearance: { templateId: seed?.templateId ?? DEFAULT_APPEARANCE.templateId },
